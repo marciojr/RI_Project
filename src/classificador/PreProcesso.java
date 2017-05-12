@@ -19,18 +19,18 @@ public class PreProcesso {
         for (int i = 0; i < listG.size(); i++) {
         	try {
             	url = new URL(listG.get(i));
-                getPage(url, "src\\classificador\\Examples\\Positives\\PosDoc"+i+1);
-            
+                getPage(url, "src\\classificador\\Examples\\Positives\\PosDoc"+i);
+                System.out.println(i + ":  " + listG.get(i));
             } catch (Exception e) {
                 e.printStackTrace();
             }
 		}   
-        System.out.println("Páginas Positivas Criadas!!");
+        System.out.println("\n\nPáginas Positivas Criadas!!\n\n");
         for (int i = 0; i < listB.size(); i++) {
         	try {
         		url = new URL(listB.get(i));
-                getPage(url, "src\\classificador\\Examples\\Negatives\\NegDoc"+i+1);
-            
+                getPage(url, "src\\classificador\\Examples\\Negatives\\NegDoc"+i);
+                System.out.println(i + ":  " + listB.get(i));
             } catch (Exception e) {
                 e.printStackTrace();
             }
